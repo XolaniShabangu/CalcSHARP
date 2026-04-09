@@ -1,5 +1,8 @@
 # CalcSHARP
 
+![CalcSHARP preview](CalcSHARP.png)
+
+
 
 A project I built to practice JavaScript while working through a web development course. It's a fully functional calculator with a hidden trick — hit the `</>` button and watch the interface scatter across the screen, revealing a live C# code executor powered by the Wandbox API.
 
