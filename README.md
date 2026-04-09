@@ -1,6 +1,6 @@
 # CalcSHARP
 
-![CalcSHARP preview](CalcSHARP.png)
+![CalcSHARP](calcSHARP.png)
 
 
 
