@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CalcSharp</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <h1 class="app-title">CALCSHARP</h1>
+    <button class="mode-toggle" id="mode-toggle" onclick="toggleMode()" title="Toggle C# console">&lt;/&gt;</button>
+  </div>
+
+  <div class="calculator" id="calculator">
+
+    <!-- Calculator content -->
+    <div class="calc-inner" id="calc-inner">
+      <div class="display">
+        <div class="expression" id="expression"></div>
+        <div class="result" id="result">0</div>
+      </div>
+      <div class="buttons">
+        <button class="btn gray" id="btn-ac" onclick="pressAC()">AC</button>
+        <button class="btn gray" onclick="pressPlusMinus()">+/-</button>
+        <button class="btn gray" onclick="pressPercent()">%</button>
+        <button class="btn orange" id="btn-div" onclick="pressOperator('÷')">÷</button>
+
+        <button class="btn dark" onclick="pressDigit('7')">7</button>
+        <button class="btn dark" onclick="pressDigit('8')">8</button>
+        <button class="btn dark" onclick="pressDigit('9')">9</button>
+        <button class="btn orange" id="btn-mul" onclick="pressOperator('×')">×</button>
+
+        <button class="btn dark" onclick="pressDigit('4')">4</button>
+        <button class="btn dark" onclick="pressDigit('5')">5</button>
+        <button class="btn dark" onclick="pressDigit('6')">6</button>
+        <button class="btn orange" id="btn-sub" onclick="pressOperator('−')">−</button>
+
+        <button class="btn dark" onclick="pressDigit('1')">1</button>
+        <button class="btn dark" onclick="pressDigit('2')">2</button>
+        <button class="btn dark" onclick="pressDigit('3')">3</button>
+        <button class="btn orange" id="btn-add" onclick="pressOperator('+')">+</button>
+
+        <button class="btn dark zero" onclick="pressDigit('0')">0</button>
+        <button class="btn dark" onclick="pressDecimal()">.</button>
+        <button class="btn orange" onclick="pressEquals()">=</button>
+      </div>
+    </div>
+
+    <!-- C# Console -->
+    <div class="console-inner" id="console-inner">
+      <div class="console-topbar">
+        <span class="console-lang">C#</span>
+        <button class="console-clear" onclick="clearConsole()">clear</button>
+      </div>
+      <div class="console-output" id="console-output"></div>
+      <div class="console-input-row">
+        <span class="console-prompt">&gt;</span>
+        <textarea class="console-input" id="console-input" rows="1"
+          placeholder="Write C# here... Enter to run, Shift+Enter for newline"></textarea>
+        <button class="console-run" id="console-run" onclick="runCode()">&#9654;</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="calculator.js"></script>
+  <script src="console.js"></script>
+</body>
+</html>
